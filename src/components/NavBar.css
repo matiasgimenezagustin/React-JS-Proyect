@@ -1,0 +1,32 @@
+.nav{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    background-color: aliceblue;
+}
+
+.nav ul{
+    width: 80%;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.nav ul li a{
+    text-decoration: none;
+    color: black;
+    background-color: rgb(202, 199, 199);
+    padding: 10px 20px 10px 20px;
+    border-radius: 20px;
+}
+.nav ul li a:hover{
+    text-shadow: rgb(255, 254, 254) 2px 2px 2px;
+}
+
+.nav h2{
+    width: 20%;
+}
