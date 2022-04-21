@@ -1,7 +1,9 @@
 import React from 'react';
+import CardWidget from '../CardWidget/CardWidget';
 import "./NavBar.css";
 
-function NavBar(props) {
+
+const NavBar =  (props) => {
     return (
         <div className='nav'>
             <h2>
@@ -12,6 +14,7 @@ function NavBar(props) {
                 <li><a href="#">Servicios</a></li>
                 <li><a href="#">Contacto</a></li>
             </ul>
+            <CardWidget className="cardWidget"/>
         </div>
     );
 }

@@ -3,7 +3,13 @@
     padding: 0;
     display: flex;
     justify-content: space-around;
+    align-items: center;
     background-color: aliceblue;
+    padding: 0px 20px 0px 20px;
+    height: 70px;
+}
+.nav div img{
+    width: 50px;
 }
 
 .nav ul{
@@ -29,4 +35,5 @@
 
 .nav h2{
     width: 20%;
+    font-size: 2rem;
 }
