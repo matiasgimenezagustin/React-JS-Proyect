@@ -7,7 +7,7 @@ function ItemCount({initial, stock, onAdd}) {
 
     const [count, setCount] = useState(parseInt(initial));
 
-    useEffect(() => {
+/*     useEffect(() => {
 
         console.log("mounted")
 
@@ -16,7 +16,7 @@ function ItemCount({initial, stock, onAdd}) {
             console.log("unmounted")
 
         }
-    }, [count]);
+    }, [count]); */
 
 
     return (
