@@ -6,6 +6,7 @@ function ItemCount({initial, stock, onAdd}) {
 
 
     const [count, setCount] = useState(parseInt(initial));
+    
 
 /*     useEffect(() => {
 
@@ -22,13 +23,13 @@ function ItemCount({initial, stock, onAdd}) {
     return (
         <div className='counter'>
             <div>
-                <button className='plusButton' onClick={() => setCount(count === 1? count = 1 : count - 1)}>
+                <button className='plusButton' onClick={() => setCount(count === 1? parseInt(initial) : count - 1)}>
                 -
                 </button>
                 <p>
                     {count}
                 </p>
-                <button className='plusButton' onClick={() => setCount(count === parseInt(stock) ? count = parseInt(stock) : count + 1)}>
+                <button className='plusButton' onClick={() => setCount(count === parseInt(stock) ? parseInt(stock) : count + 1)}>
                 +
                 </button>
             </div>
