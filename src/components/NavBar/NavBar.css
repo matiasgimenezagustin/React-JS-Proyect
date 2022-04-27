@@ -4,7 +4,7 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color: aliceblue;
+    background-color: #495057;
     padding: 0px 20px 0px 20px;
     height: 70px;
 }
@@ -24,11 +24,24 @@
 
 .nav ul li a{
     text-decoration: none;
-    color: black;
-    background-color: rgb(202, 199, 199);
-    padding: 10px 20px 10px 20px;
-    border-radius: 20px;
+
+    color: #fff;
+    padding: 5px 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    outline: none;
+    border-radius: 5px;
+    border: 2px solid #212529;
+    background: #212529;
 }
+.nav ul li a:hover {
+    background: #fff;
+    color: #212529;
+}
+
 .nav ul li a:hover{
     text-shadow: rgb(255, 254, 254) 2px 2px 2px;
 }
@@ -36,4 +49,5 @@
 .nav h2{
     width: 20%;
     font-size: 2rem;
+    color: #fff;
 }
