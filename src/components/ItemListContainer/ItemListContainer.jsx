@@ -5,8 +5,12 @@ import ItemCount from '../ItemCount/ItemCount';
 function ItemListContainer({greeting, lista}) {
 
     const extraerValorCarrito = (valorDelCarrito) =>{
+        
+        let resultAlert;
 
-        return console.log(valorDelCarrito);
+        valorDelCarrito === 1 ? resultAlert = `Agregaste ${valorDelCarrito} producto al carrito` : resultAlert = `Agregaste ${valorDelCarrito} productos al carrito`;
+
+        return alert(resultAlert);
         
     }
     
