@@ -23,7 +23,7 @@ function ItemCount({initial, stock, onAdd}) {
     return (
         <div className='counter'>
             <div>
-                <button className='plusButton' onClick={() => setCount(count === 1? parseInt(initial) : count - 1)}>
+                <button className='plusButton' onClick={() => setCount(count === parseInt(initial) ? parseInt(initial) : count - 1)}>
                 -
                 </button>
                 <p>

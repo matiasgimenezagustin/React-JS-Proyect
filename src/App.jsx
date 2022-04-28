@@ -1,5 +1,4 @@
-import logo from './logo.svg';
-import './App.css';
+
 import NavBar from './components/NavBar/NavBar';
 import Button from './components/Button/Button';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
@@ -27,9 +26,6 @@ function App() {
   {/*  no usar () para no ejecutarla, solo usamos "extraerValor" como referencia de la funcion
       <Input handleExtraer={extraerValor} id="1"/>
       <Input handleExtraer={extraerValor} id="2"/> */}
-
-
-
 
       
     </div>

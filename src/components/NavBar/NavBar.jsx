@@ -1,6 +1,7 @@
 import React from 'react';
-import CardWidget from '../CardWidget/CardWidget';
 import "./NavBar.css";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {faCartShopping} from "@fortawesome/free-solid-svg-icons";
 
 
 const NavBar =  (props) => {
@@ -14,7 +15,7 @@ const NavBar =  (props) => {
                 <li><a href="#">Servicios</a></li>
                 <li><a href="#">Contacto</a></li>
             </ul>
-            <CardWidget className="cardWidget"/>
+            <FontAwesomeIcon className='cardWidget'icon={faCartShopping} />
         </div>
     );
 }
