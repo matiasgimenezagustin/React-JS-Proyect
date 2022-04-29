@@ -3,6 +3,10 @@ import NavBar from './components/NavBar/NavBar';
 import Button from './components/Button/Button';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 import Input from './components/Input/Input';
+import Home from "./Pages/Home/index"
+import Catalogo from "./Pages/Catalogo/index"
+import Detalle from "./Pages/Detalle/index"
+import {BrowserRouter, Routes, Route} from "react-router-dom"
 
 
 
@@ -18,6 +22,10 @@ function App() {
   return (
     <div className="App">
       <NavBar />
+
+      <Home/>
+      <Detalle/>
+      <Catalogo/>
 
       {/*<Button texto='Botton' color='red'/> */}
 
