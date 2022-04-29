@@ -1,5 +1,11 @@
 .itemCard{
     display: flex;
+    flex-direction: column;
+    background-color: #495057;
+    border-radius: 10px;
+    color: #fff;
+    padding: 10px;
+    border: solid 2px #212529;
 }
 
 .itemCard h3{
@@ -8,4 +14,5 @@
 
 .itemCard img{
     width: 200px;
+    max-height: 100px;
 }

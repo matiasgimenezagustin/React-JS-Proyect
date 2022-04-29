@@ -1,11 +1,12 @@
 import React from 'react';
 import Item from '../Item/Item';
+import "./itemList.css"
 
 function ItemList({ products }) {
     console.log("funciona", products)
 
     return (
-        <>
+        <div className='listCatalogo'>
             {products.map((product) => {
                 return(
                     <Item 
@@ -16,8 +17,7 @@ function ItemList({ products }) {
                     />
                 );
             })}
-            <Item/>
-        </>
+        </div>
     );
 }
 
