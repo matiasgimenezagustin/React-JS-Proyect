@@ -1,0 +1,23 @@
+.itemDetail{
+    display: grid;
+    width: 90%;
+    margin: auto;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 4fr;
+    grid-template-areas: 
+    "title none"
+    "img descripcion"
+    ;
+}
+
+.itemDetail img{
+    width: 400px;
+    grid-area: img;
+}
+
+.itemDetail .detail{
+    grid-area: descripcion;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
