@@ -2,6 +2,7 @@ import React from 'react';
 import "./NavBar.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faCartShopping} from "@fortawesome/free-solid-svg-icons";
+import { NavLink } from 'react-router-dom';
 
 
 const NavBar =  (props) => {
@@ -11,9 +12,8 @@ const NavBar =  (props) => {
                 React Store
             </h2>
             <ul>
-                <li><a href="#">Menu</a></li>
-                <li><a href="#">Servicios</a></li>
-                <li><a href="#">Contacto</a></li>
+                <li><NavLink  to="/category/development">Development</NavLink></li>
+                <li><NavLink  to="/category/desing">Desing</NavLink></li>
             </ul>
             <FontAwesomeIcon className='cardWidget'icon={faCartShopping} />
         </div>

@@ -2,7 +2,6 @@ import React from 'react';
 import Item from '../Item/Item';
 
 function ItemList({ products }) {
-    console.log("funciona", products)
 
     return (
         <div className='listCatalogo'>

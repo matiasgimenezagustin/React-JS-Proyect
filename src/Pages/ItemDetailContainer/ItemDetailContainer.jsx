@@ -37,7 +37,7 @@ function getItem(id) {
         }
     ];
 
-    const item = products.filter( item => item.id == id);
+    const item = products.filter( item => item.id === parseInt(id));
     console.log(item)
         setTimeout(() => {
             resolve(item[0])

@@ -4,7 +4,6 @@ import {Link} from "react-router-dom";
 
 function Item({ id, title, img, price}) {
 
-    console.log(id)
     return (
         <div className='itemCard'>
             <h3>

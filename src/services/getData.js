@@ -35,10 +35,6 @@ const getData = new Promise((resolve) => {
     }, 2000)
 });
 
-/* const getData = new Promise((resolve) => {
-    setTimeout(() => {
-        resolve(data);
-    }, 5000)
-}); */
+
 
 export default getData
