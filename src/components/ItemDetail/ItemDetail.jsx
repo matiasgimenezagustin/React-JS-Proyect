@@ -19,10 +19,10 @@ function ItemDetail({ item }) {
     return (
         <div className='itemDetail'>
             <h2 className='titleDetail'>{item?.title}</h2>
-            <img src={item?.url} alt="Imagen de dev" />
+            <img src={item?.image} alt="Imagen de dev" />
             <div className='detail'>
                 <h3> Categoria: {item?.categoria}</h3>
-                <h3> Precio: {item?.precio}</h3>
+                <h3> Precio: {item?.price}</h3>
                 <h3>{item?.descripcion}</h3>
                 <ItemCount initial={1} stock={item?.stock} onAdd={extraerValorCarrito}/>
             </div>
