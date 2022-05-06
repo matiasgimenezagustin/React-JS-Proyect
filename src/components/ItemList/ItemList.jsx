@@ -10,6 +10,7 @@ function ItemList({ products }) {
                 return(
                     <Item 
                     key={product.id} 
+                    id={product.id}
                     title={product.title} 
                     img={product.image}
                     price={product.price}

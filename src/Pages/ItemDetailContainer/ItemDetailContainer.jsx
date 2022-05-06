@@ -1,10 +1,14 @@
 import React, { useState, useEffect } from 'react';
-import ItemDetail from '../ItemDetail/ItemDetail';
+import ItemDetail from '../../components/ItemDetail/ItemDetail';
 
 
 function getItem() {
 
     const myPromise = new Promise((resolve, reject) => {
+
+        /* const product1 = new Product(0, "https://josefacchin.com/wp-content/uploads/2016/02/landing-page-wordpress.png", "Landing Page", "Tu producto en solo una pagina", "Development", 15000, 3);
+
+    const product2 = new Product(1, "https://marketing4ecommerce.net/wp-content/uploads/2020/11/nueva-portada-enero-1-6.jpg", "Web Desing", "Alcanza tus objetivos con una buena imagen", "Desing", 10000, 5); */
         const item = {
             id : 1,
             title : "E-Commerce",
