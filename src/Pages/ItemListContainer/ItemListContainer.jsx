@@ -57,11 +57,10 @@ function ItemListContainer({}) {
 
     const { categoryId } = useParams();
 
-    console.log(categoryId)
-
     const [products, setProducts] = useState ([])
 
     useEffect (() => {
+
         getProducts(categoryId)
 
             .then((res) => setProducts(res))
@@ -69,6 +68,7 @@ function ItemListContainer({}) {
             .catch((error) => console.log("no anda", error));
 
     }, [categoryId])
+
 
 
     

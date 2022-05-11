@@ -17,7 +17,7 @@ function ItemCount({initial, stock, onAdd}) {
             console.log("unmounted")
 
         }
-    }, [count]); */
+    }, [count]);  */
 
 
     return (
@@ -36,9 +36,6 @@ function ItemCount({initial, stock, onAdd}) {
             <button className='addCart'  onClick={() => onAdd(count)}>
                 agregar al carrito
             </button>
-            {/* <button onClick={() => handleExtraer(document.querySelector("#input-" + id).value)}>Extraer</button> */}
-            
-        
         </div>
     );
 }

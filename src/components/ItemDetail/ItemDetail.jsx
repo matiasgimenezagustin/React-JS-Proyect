@@ -1,10 +1,16 @@
-import React from 'react';
+
+import React, { useEffect, useState } from 'react';
 import "./itemDetail.css";
 import ItemCount from '../ItemCount/ItemCount';
+import {Link} from "react-router-dom";
 
 
 
 function ItemDetail({ item }) {
+
+    const [condicion, setCondicion] = useState(false)
+
+    let quantity;
 
     const extraerValorCarrito = (valorDelCarrito) =>{
 
@@ -12,9 +18,17 @@ function ItemDetail({ item }) {
 
         const resultAlert = `Agregaste ${valorDelCarrito} ${productsOfProducts} al carrito`;
 
+        setCondicion (true);
+
+        quantity = valorDelCarrito
+
         return alert(resultAlert);
         
     }
+    useEffect(() => {
+        return () => {
+        }
+    }, [condicion]);
 
     return (
         <div className='itemDetail'>
@@ -24,7 +38,9 @@ function ItemDetail({ item }) {
                 <h3> Categoria: {item?.categoria}</h3>
                 <h3> Precio: {item?.price}</h3>
                 <h3>{item?.descripcion}</h3>
-                <ItemCount initial={1} stock={item?.stock} onAdd={extraerValorCarrito}/>
+                {condicion === false ? <ItemCount  initial={1} stock={item?.stock} onAdd={extraerValorCarrito}/> : <Link to="/cart" className='buttonAddCart' quantityToAdd={quantity}>Terminar compra</Link>}
+                
+                
             </div>
         </div>  
     );
