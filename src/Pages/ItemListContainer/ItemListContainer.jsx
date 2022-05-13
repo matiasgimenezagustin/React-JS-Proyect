@@ -1,50 +1,31 @@
 import React, { useEffect, useState } from 'react';
 import "./ItemListContainer.css";
 import ItemList from '../../components/ItemList/ItemList';
-/* import getData from "../../services/getData"; */
+import products from '../../Products/products';
 import { useParams } from 'react-router-dom';
+import { initializeApp } from "firebase/app";
+import {collection, getDocs, getFirestore, query, where, limit} from "firebase/firestore"
 
+
+
+const firebaseConfig = {
+  apiKey: "AIzaSyC6p4_ATrCXOMQmPPQ73PwUOckcfvzE2z0",
+  authDomain: "react-store-a7d4c.firebaseapp.com",
+  projectId: "react-store-a7d4c",
+  storageBucket: "react-store-a7d4c.appspot.com",
+  messagingSenderId: "843615803039",
+  appId: "1:843615803039:web:0177d57359422e0861f4aa"
+};
+
+initializeApp(firebaseConfig);
 
 
 function getProducts (categoria) {
+    
 
     const myPromise = new Promise((resolve) => {
 
-        const products = [
-            {
-                id: 0,
-                image: "https://josefacchin.com/wp-content/uploads/2016/02/landing-page-wordpress.png",
-                title:"Landing Page",
-                categoria: "development",
-                price : 15000,
-            },
-            {
-                id: 1,
-                image: "https://marketing4ecommerce.net/wp-content/uploads/2020/11/nueva-portada-enero-1-6.jpg",
-                title:"Web Desing",
-                categoria: "desing",
-                price : 10000,
-            },
-            {
-                id: 2,
-                image: "https://www.cronista.com/files/image/319/319739/60140d74c99af.jpg",
-                title: "E-Commerce",
-                categoria: "development",
-                price : 70000,
-            }
-        ];
-        const emptyFilter = () =>{
-            if ( categoria == undefined){
-
-                return products
-
-            }else{
-
-                const productsFiltered = products.filter(p => p.categoria == categoria)
-
-                return productsFiltered
-            }
-        }
+        const emptyFilter = () => categoria ? products.filter(product => product.categoria.toLowerCase() === categoria) : products;
         setTimeout(() => {
             resolve(emptyFilter)
         }, 2000)
@@ -60,6 +41,21 @@ function ItemListContainer({}) {
     const [products, setProducts] = useState ([])
 
     useEffect (() => {
+        /* const q = query(
+            itemCollection,
+            where("price", ">", 600)
+        )
+
+        const db = getFirestore();
+
+        const itemCollection = collection(db, "items")
+        getDocs(q)
+            .then(snapshot =>{
+                console.log(snapshot.docs.map(doc => {
+                    return{...doc.data(), doc: doc.id}
+                }))
+            }) */
+            
 
         getProducts(categoryId)
 

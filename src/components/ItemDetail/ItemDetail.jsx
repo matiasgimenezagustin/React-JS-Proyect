@@ -3,25 +3,23 @@ import React, { useEffect, useState } from 'react';
 import "./itemDetail.css";
 import ItemCount from '../ItemCount/ItemCount';
 import {Link} from "react-router-dom";
+import {useCardContext} from "../../Context/CardContextProvider"
 
 
 
 function ItemDetail({ item }) {
 
-    const [condicion, setCondicion] = useState(false)
+    const { addToCart } = useCardContext();
 
-    let quantity;
+    const [condicion, setCondicion] = useState(false)
 
     const extraerValorCarrito = (valorDelCarrito) =>{
 
+        addToCart(item.title, valorDelCarrito);
+
         const productsOfProducts = valorDelCarrito === 1 ? "producto" : "productos";
-
         const resultAlert = `Agregaste ${valorDelCarrito} ${productsOfProducts} al carrito`;
-
         setCondicion (true);
-
-        quantity = valorDelCarrito
-
         return alert(resultAlert);
         
     }
@@ -38,7 +36,7 @@ function ItemDetail({ item }) {
                 <h3> Categoria: {item?.categoria}</h3>
                 <h3> Precio: {item?.price}</h3>
                 <h3>{item?.descripcion}</h3>
-                {condicion === false ? <ItemCount  initial={1} stock={item?.stock} onAdd={extraerValorCarrito}/> : <Link to="/cart" className='buttonAddCart' quantityToAdd={quantity}>Terminar compra</Link>}
+                {condicion === false ? <ItemCount  initial={1} stock={item?.stock} onAdd={extraerValorCarrito}/> : <Link to="/cart" className='buttonAddCart' >Terminar compra</Link>}
                 
                 
             </div>

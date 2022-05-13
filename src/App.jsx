@@ -8,19 +8,13 @@ import Cart from './Pages/Cart/Cart';
 
 
 function App() {
-  
-  const extraerValor = (valorDelInput) =>{
-
-    return console.log(valorDelInput);
-
-  }
-
 
   return (
     <div className="App">
       <NavBar />
       <Routes>
-        <Route path='/' element={<ItemListContainer/>}/>
+
+        <Route path='/' element={<ItemListContainer/>} />
         <Route path="/category/:categoryId" element={<ItemListContainer/>}/>
         <Route path="/item/:id" element={<ItemDetailContainer/>} />
         <Route path='/cart/' element={<Cart/>}/>

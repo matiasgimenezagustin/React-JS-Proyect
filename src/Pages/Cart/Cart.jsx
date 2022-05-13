@@ -1,10 +1,13 @@
 import React from 'react';
+import CartItem from '../../components/CartItem/CartItem';
+import { useCardContext } from '../../Context/CardContextProvider';
 
-function Cart({ quantity }) {
-    console.log(quantity)
+function Cart() {
+    const {cartList} = useCardContext()
+
     return (
         <div>
-            hola mundo
+            {/* {cartList.map(item =><CartItem key={item.id} item={item.title}/>)} */}
         </div>
     );
 }
