@@ -28,7 +28,7 @@ function getProducts (categoria) {
         const emptyFilter = () => categoria ? products.filter(product => product.categoria.toLowerCase() === categoria) : products;
         setTimeout(() => {
             resolve(emptyFilter)
-        }, 2000)
+        }, 0)
     });
     return myPromise
 }

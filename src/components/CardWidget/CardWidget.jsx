@@ -1,9 +1,17 @@
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {faCartShopping} from "@fortawesome/free-solid-svg-icons";
+import {Link} from 'react-router-dom';
+import { useCardContext } from '../../Context/CardContextProvider';
 
 const CardWidget = () => {
+    const {totalCount} = useCardContext()
     return (
         <div>
-            <img src="https://cdn.icon-icons.com/icons2/933/PNG/128/shopping-cart_icon-icons.com_72552.png" alt="carrito icono" />
+            <Link to="/cart">
+                <FontAwesomeIcon className='cardWidget'icon={faCartShopping} />
+            </Link>
+            <span>{totalCount()}</span>
         </div>
     );
 };

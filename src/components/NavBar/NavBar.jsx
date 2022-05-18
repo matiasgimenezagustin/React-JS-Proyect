@@ -1,8 +1,7 @@
 import React from 'react';
 import "./NavBar.css";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {faCartShopping} from "@fortawesome/free-solid-svg-icons";
 import { NavLink } from 'react-router-dom';
+import CardWidget from '../CardWidget/CardWidget';
 
 
 const NavBar =  (props) => {
@@ -15,7 +14,7 @@ const NavBar =  (props) => {
                 <li><NavLink  to="/category/development">Development</NavLink></li>
                 <li><NavLink  to="/category/desing">Desing</NavLink></li>
             </ul>
-            <FontAwesomeIcon className='cardWidget'icon={faCartShopping} />
+            <CardWidget></CardWidget>
         </div>
     );
 }

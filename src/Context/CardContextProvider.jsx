@@ -16,12 +16,12 @@ function CardContextProvider({children}) {
 
     }
 
-    const addToCart = (item, quantity)=>{
+    const addToCart = (item, quantity, price, id)=>{
 
         if(isInCart(item.id)){
-            return setCartList(cartList.map(product => product.id === item.id ? {...product, quantity : product.quantity + quantity} : product))
+            return setCartList(cartList.map((product) => (product.id === item.id ? {...product, quantity : product.quantity + item.quantity} : product)))
         }
-        setCartList([...cartList, {...item, quantity}])
+        setCartList([...cartList, {item, quantity, price, id}])
     }
     const emptyCart = ( ) => {
         setCartList([])
@@ -40,7 +40,7 @@ function CardContextProvider({children}) {
 
     const totalPrice = ( ) =>{
 
-        return cartList.reduce((total, item) => total + item.quantity * item.price, 0 );
+        return cartList.reduce((total, item) => total + parseInt(item.quantity) * item.price, 0 );
 
     }
 

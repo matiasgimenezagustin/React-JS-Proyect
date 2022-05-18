@@ -15,7 +15,12 @@ function ItemDetail({ item }) {
 
     const extraerValorCarrito = (valorDelCarrito) =>{
 
-        addToCart(item.title, valorDelCarrito);
+        console.log(item.title)
+
+        let title = item.title;
+
+
+        addToCart(title, valorDelCarrito, item.price, item.id);
 
         const productsOfProducts = valorDelCarrito === 1 ? "producto" : "productos";
         const resultAlert = `Agregaste ${valorDelCarrito} ${productsOfProducts} al carrito`;
