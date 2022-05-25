@@ -3,7 +3,8 @@ import "./ItemListContainer.css";
 import ItemList from '../../components/ItemList/ItemList';
 import { useParams } from 'react-router-dom';
 import { initializeApp } from "firebase/app";
-import {collection, getDocs, getFirestore, query, where, limit} from "firebase/firestore"
+import {collection, getDocs, getFirestore, query, where, limit} from "firebase/firestore";
+import firebaseConfig from '../../services/firebaseConfig';
 
 
 
@@ -14,21 +15,11 @@ function capitalize(str) {
 function ItemListContainer({}) {
     
     const [products, setProducts] = useState ([])
+
     const { categoryId } = useParams();
 
-
-    const firebaseConfig = {
-        apiKey: "AIzaSyC6p4_ATrCXOMQmPPQ73PwUOckcfvzE2z0",
-        authDomain: "react-store-a7d4c.firebaseapp.com",
-        projectId: "react-store-a7d4c",
-        storageBucket: "react-store-a7d4c.appspot.com",
-        messagingSenderId: "843615803039",
-        appId: "1:843615803039:web:0177d57359422e0861f4aa"
-    };
-    
     initializeApp(firebaseConfig);
     
-
     function getProducts (categoria) {
         const db = getFirestore();
         const itemCollection = collection(db, "items")

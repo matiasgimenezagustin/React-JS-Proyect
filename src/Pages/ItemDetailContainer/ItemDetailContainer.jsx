@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import ItemDetail from '../../components/ItemDetail/ItemDetail';
+import {doc, getDoc, getFirestore} from "firebase/firestore";
+import { initializeApp } from "firebase/app";
+import firebaseConfig from '../../services/firebaseConfig';
 
-import {doc, getDoc, getFirestore} from "firebase/firestore"
 
-
+initializeApp(firebaseConfig);
 
 function ItemDetailContainer(props) {
 

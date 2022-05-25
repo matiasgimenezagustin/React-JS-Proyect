@@ -1,6 +1,7 @@
 import React from 'react';
 import CartItem from '../../components/CartItem/CartItem';
 import { useCardContext } from '../../Context/CardContextProvider';
+import { Link } from 'react-router-dom';
 
 function Cart() {
     const {cartList, emptyCart, totalPrice} = useCardContext()
@@ -18,6 +19,12 @@ function Cart() {
                     <h2>Precio total: ${totalPrice()}</h2>
                 </>
                 : <h1>Carrito Vacio</h1>}
+
+                <Link to="/checkout">
+                    <button className='btnEnd'>
+                        Finalizar Compra
+                    </button>
+                </Link>
         </div>
     );
 }

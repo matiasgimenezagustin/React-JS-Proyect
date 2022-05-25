@@ -10,18 +10,22 @@ function CardContextProvider({children}) {
 
     const [cartList, setCartList] = useState([]);
 
-    const isInCart = (id) =>{
-
-        return cartList.some(item => item.id === id)
-
-    }
+    
 
     const addToCart = (item, quantity, price, id)=>{
+        
+        const isInCart = (id) =>{
 
-        if(isInCart(item.id)){
-            return setCartList(cartList.map((product) => (product.id === item.id ? {...product, quantity : product.quantity + item.quantity} : product)))
+            return cartList.some((item) => item.id === id)
+    
         }
-        setCartList([...cartList, {item, quantity, price, id}])
+        if(isInCart(id)){
+            return setCartList(cartList.map(product => (product.id === id ? {...product, quantity : product.quantity + quantity} : product)))
+        }
+        else{
+            setCartList([...cartList, {item, quantity, price, id}])
+        }
+
     }
     const emptyCart = ( ) => {
         setCartList([])
