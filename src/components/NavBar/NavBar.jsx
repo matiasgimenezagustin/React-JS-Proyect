@@ -9,12 +9,12 @@ import {faAngleDown} from "@fortawesome/free-solid-svg-icons";
 
 
 const NavBar =  (props) => {
-    const btnClicked = ( ) =>{
+/*     const btnClicked = ( ) =>{
         const categoryBtn = document.querySelector(".btnCategory");
         alert("hola a todos")
         categoryBtn.innerText = "hola";
 
-    }
+    } */
     return (
         <div className='nav'>
             <h2>
