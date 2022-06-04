@@ -8,9 +8,14 @@
 
 }
 
+
 .btnCategory{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 45px;
+    font-size: 1rem;
     text-align: center;
-    width: 110px;
     text-decoration: none;
     color: #fff;
     padding: 10px 20px 10px 20px;
@@ -18,7 +23,7 @@
     cursor: pointer;
     transition: all 0.3s ease;
     position: relative;
-    display: inline-block;
+
     outline: none;
     border-radius: 5px;
     border: 2px solid #212529;
@@ -44,6 +49,8 @@
     transform: var(--transform);
     margin-left: 5px;
     transition: transform .5s;
+    
+
 
 }
 
@@ -149,6 +156,11 @@
 
 
 @media screen and (max-width: 420px){
+
+    .btnCategory{
+        width: 185px;
+        height: 45px;
+    }
     .counterContainer{
         top:60%;
         left:50%;
@@ -161,7 +173,7 @@
         "title cart"
         "ul ul"
         ;
-        height: 200px;
+        height: 250px;
         padding: 10px 0 10px 0;
     }
     .nav h2{
@@ -184,6 +196,14 @@
     }
     .nav div .cardWidget{
         grid-area: cart;
-
+        margin: 0;
+    }
+    .nav .navLinks .listItemNav .categoryNesting{
+        display:flex;
+        flex-direction: column;
+        clip-path: var(--clip);
+        position: absolute;
+        bottom: -180px;
+        gap:0px;
     }
 }

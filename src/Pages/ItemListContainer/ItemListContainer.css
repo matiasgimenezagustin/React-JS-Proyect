@@ -15,10 +15,9 @@
 @media screen and (max-width: 420px){
 
     .listCatalogo{
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 20px;
-        margin-top: 20px;
+        grid-template-columns: repeat(1, 1fr);
+
+        grid-auto-rows: minmax(100px, auto);
+        margin-top: 10vh;
     }
 }

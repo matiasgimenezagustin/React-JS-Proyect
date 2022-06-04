@@ -15,6 +15,8 @@ const NavBar =  (props) => {
         categoryBtn.innerText = "hola";
 
     } */
+
+    let buttonValue = "categoria"
     return (
         <div className='nav'>
             <h2>
@@ -25,9 +27,9 @@ const NavBar =  (props) => {
                 <li><a href="">Contactanos</a></li>
 
 
-                <li className='listItemNav'  onClick={btnClicked}>
+                <li className='listItemNav'  /* onClick={btnClicked} */ >
                     <button href="" className='btnCategory'>
-                        Categorias
+                        <span>categorias</span>
                         <FontAwesomeIcon icon={faAngleDown} className='arrowNav'/>
                     </button>
 
