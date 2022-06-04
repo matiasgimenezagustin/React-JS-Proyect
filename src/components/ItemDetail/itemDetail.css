@@ -60,3 +60,26 @@
     font-size: 2rem;
     
 }
+@media screen and (max-width: 420px){
+    .buttonAddCart{
+        width: 12rem;
+    }
+    .titleDetail{
+        text-align: center;
+    }
+    .itemDetail{
+        grid-template-columns: 1fr;
+        grid-template-rows: 120px 2fr 3fr;
+        grid-template-areas: 
+        "title"
+        "img"
+        "descripcion"
+        ;
+    }
+    .itemDetail img{
+        width: 250px;
+        grid-area: img;
+        border-radius: 5px;
+        margin: auto;
+    }
+}

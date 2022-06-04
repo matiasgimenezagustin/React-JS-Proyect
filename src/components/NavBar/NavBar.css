@@ -162,8 +162,8 @@
         height: 45px;
     }
     .counterContainer{
-        top:60%;
-        left:50%;
+        top:65%;
+        left:55%;
     }
     .nav{
         display: grid;
@@ -197,6 +197,7 @@
     .nav div .cardWidget{
         grid-area: cart;
         margin: 0;
+        padding: 9px 17px;
     }
     .nav .navLinks .listItemNav .categoryNesting{
         display:flex;
