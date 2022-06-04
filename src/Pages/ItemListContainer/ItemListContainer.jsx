@@ -5,6 +5,7 @@ import { useParams } from 'react-router-dom';
 import { initializeApp } from "firebase/app";
 import {collection, getDocs, getFirestore, query, where, limit} from "firebase/firestore";
 import firebaseConfig from '../../services/firebaseConfig';
+import Spinner from '../../components/Spinner/Spinner';
 
 
 
@@ -13,6 +14,12 @@ function capitalize(str) {
 }
 
 function ItemListContainer({}) {
+
+    const [condicion, setCondicion] = useState(false)
+
+    useEffect(() => {
+    }, [condicion]);
+
     
     const [products, setProducts] = useState ([])
 
@@ -33,6 +40,7 @@ function ItemListContainer({}) {
     useEffect (() => {
         getProducts(categoryId)
             .then(snapshot =>{
+                setCondicion(true)
                 setProducts(snapshot.docs.map(doc => {
                     return {...doc.data(), id : doc.id}
                 }))
@@ -40,12 +48,14 @@ function ItemListContainer({}) {
     }, [categoryId])
 
     return (
-        <div className='catalogo'>
-
-            <ItemList products={products} />
-
-            {/* lo pongo en comentario porque el profe sugirio de momento no usarlo{greeting || "Este contenedor aun se encuentra vacio"} */}
-
+        <div>
+            {condicion === false ?
+                <div className='centred'>
+                    <Spinner/>
+                </div>
+            :
+                <ItemList products={products} />
+            }
         </div>
     );
 }

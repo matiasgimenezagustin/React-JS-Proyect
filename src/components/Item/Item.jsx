@@ -1,6 +1,8 @@
 import React from 'react';
 import "./item.css";
 import {Link} from "react-router-dom";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowRightToBracket} from "@fortawesome/free-solid-svg-icons";
 
 function Item({ id, title, img, price}) {
 
@@ -12,7 +14,10 @@ function Item({ id, title, img, price}) {
             </h3>
             <img src={img} />
             <h4>{price}$</h4>
-            <Link to={"/item/" + id}> ver detalle</Link>
+            <Link className='detailBtn' to={"/item/" + id}>
+                <h4 className='detailBtnText'>Ver detalle</h4>
+                <FontAwesomeIcon icon={faArrowRightToBracket} className="detailBtnIcon" />
+            </Link>
         </div>
     );
 }

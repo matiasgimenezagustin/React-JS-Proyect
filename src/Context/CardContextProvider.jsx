@@ -12,7 +12,7 @@ function CardContextProvider({children}) {
 
     
 
-    const addToCart = (item, quantity, price, id)=>{
+    const addToCart = (item, quantity, price, id, img)=>{
         
         const isInCart = (id) =>{
 
@@ -23,7 +23,7 @@ function CardContextProvider({children}) {
             return setCartList(cartList.map(product => (product.id === id ? {...product, quantity : product.quantity + quantity} : product)))
         }
         else{
-            setCartList([...cartList, {item, quantity, price, id}])
+            setCartList([...cartList, {item, quantity, price, id, img}])
         }
 
     }
@@ -53,6 +53,7 @@ function CardContextProvider({children}) {
         return cartList.find(item => item.id === id ).quantity;
 
     }
+
     return (
         <CardContext.Provider value={{
             cartList
@@ -61,7 +62,8 @@ function CardContextProvider({children}) {
             , totalPrice
             , deleteById
             , emptyCart
-            , unitsPerProucts}}>
+            , unitsPerProucts
+            }}>
             {children}
         </CardContext.Provider>
     );

@@ -1,0 +1,48 @@
+
+.cartItem{
+    background-color: #495057;
+    margin: 20px;
+    color: white;
+    border-radius: 5px;
+    padding: 10px;
+}
+.btnEnd{
+    color: #fff;
+    padding: 5px 10px 5px 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    outline: none;
+    border-radius: 5px;
+    border: 2px solid #212529;
+    background: #212529;
+}
+.btnEndSell{
+    align-self: center;
+    text-decoration: none;
+}
+
+.btnEnd:hover{
+    background: #fff;
+    color: #212529;
+}
+.btnEndControls{
+    display: flex;
+    flex-direction: column;
+    background-color: #495057;
+    width: 40%;
+    margin: auto;
+    border-radius: 5px;
+    padding: 20px;
+}
+.btnEmptyCart{
+    width: fit-content;
+    align-self: center;
+    font-size: 1rem;
+}
+.totalPrice{
+    text-align: center;
+    color: #fff;
+}

@@ -4,14 +4,17 @@ import {faCartShopping} from "@fortawesome/free-solid-svg-icons";
 import {Link} from 'react-router-dom';
 import { useCardContext } from '../../Context/CardContextProvider';
 
+
 const CardWidget = () => {
     const {totalCount} = useCardContext()
     return (
         <div>
-            <Link to="/cart">
+            <Link to="/cart"  className='cartWidgetContainer'>
                 <FontAwesomeIcon className='cardWidget'icon={faCartShopping} />
+                <div className='counterContainer'>
+                    {totalCount()}
+                </div>
             </Link>
-            <span>{totalCount()}</span>
         </div>
     );
 };

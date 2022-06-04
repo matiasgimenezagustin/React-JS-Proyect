@@ -1,0 +1,17 @@
+.btnEnd{
+    color: #fff;
+    padding: 5px 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    outline: none;
+    border-radius: 5px;
+    border: 2px solid #212529;
+    background: #212529;
+}
+.btnEnd:hover{
+    background: #fff;
+    color: #212529
+}

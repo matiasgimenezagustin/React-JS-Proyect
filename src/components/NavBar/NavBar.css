@@ -1,3 +1,52 @@
+.navLinks{
+    transition: .5s;
+}
+.listItemNav{
+    position: relative;
+    --clip: polygon(0 0, 100% 0, 100% 0, 0 0);
+    --transform: rotate(-90deg);
+
+}
+
+.btnCategory{
+    text-align: center;
+    width: 110px;
+    text-decoration: none;
+    color: #fff;
+    padding: 10px 20px 10px 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    outline: none;
+    border-radius: 5px;
+    border: 2px solid #212529;
+    background: #212529;
+}
+.btnCategory:hover{
+    background: #fff;
+    color: #212529;
+}
+.listItemNav:hover{
+    --clip: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    --transform: rotate(0);
+}
+.categoryNesting{
+    width: 500px;
+    display:flex;
+    flex-direction: column;
+    clip-path: var(--clip);
+    position: absolute;
+    bottom: -165px;
+}
+.arrowNav{
+    transform: var(--transform);
+    margin-left: 5px;
+    transition: transform .5s;
+
+}
+
 .nav{
     margin: 0;
     padding: 0;
@@ -11,7 +60,7 @@
 .nav .cardWidget{
     font-size: 1.8rem;
     color: #fff;
-    padding: 5px 10px;
+    padding: 10px 20px 10px 20px;
     font-weight: bold;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -22,10 +71,35 @@
     border: 2px solid #212529;
     background: #212529;
 }
+
 .nav .cardWidget:hover{
     background: #fff;
     color: #212529;
 }
+.cartWidgetContainer{
+    text-decoration: none;
+    display: flex;
+    position: relative;
+}
+.counterContainer{
+    background-color: #fff;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid 1px black;
+    border-radius: 50%;
+    position: absolute;
+    top: 70%;
+    left: 70%;
+    color: black;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+    font-weight: 500;
+}
+
 
 .nav ul{
     width: 80%;
@@ -42,7 +116,7 @@
     width: 110px;
     text-decoration: none;
     color: #fff;
-    padding: 7px 10px;
+    padding: 10px 20px 10px 20px;
     font-weight: bold;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -67,7 +141,18 @@
     font-size: 2rem;
     color: #fff;
 }
+
+
+
+
+
+
+
 @media screen and (max-width: 420px){
+    .counterContainer{
+        top:60%;
+        left:50%;
+    }
     .nav{
         display: grid;
         grid-template-columns: 3fr 1fr;
