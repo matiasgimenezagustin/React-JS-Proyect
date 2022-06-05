@@ -4,9 +4,7 @@ import {Link} from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRightToBracket} from "@fortawesome/free-solid-svg-icons";
 
-function Item({ id, title, img, price}) {
-
-
+const Item = ({ id, title, img, price}) => {
     return (
         <div className='itemCard'>
             <h3>

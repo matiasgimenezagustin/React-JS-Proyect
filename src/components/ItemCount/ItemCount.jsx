@@ -1,24 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import "./counter.css"
 
-function ItemCount({initial, stock, onAdd}) {
-
-
+const ItemCount = ({initial, stock, onAdd}) => {
 
     const [count, setCount] = useState(parseInt(initial));
-    
-
-/*     useEffect(() => {
-
-        console.log("mounted")
-
-        return () => {
-
-            console.log("unmounted")
-
-        }
-    }, [count]);  */
-
 
     return (
         <div className='counter'>

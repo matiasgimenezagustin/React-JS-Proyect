@@ -48,12 +48,19 @@
     width: 32rem;
     margin: auto;
     border-radius: 5px;
+    padding-bottom: 10px;
 }
 .centred{
     height: 85vh;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.checkOut{
+    color: #fff;
+}
+.btnEnd{
+    text-decoration: none;
 }
 @media screen and (max-width: 420px){
     .formBuyer{

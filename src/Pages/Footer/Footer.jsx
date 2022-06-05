@@ -1,6 +1,7 @@
 import React from 'react';
-import './footer.css'
-function Footer(props) {
+import './footer.css';
+
+const Footer = () => {
     return (
         <footer className='footer'>
             <h3 className='footerTitle'>React Store</h3>

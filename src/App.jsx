@@ -1,18 +1,18 @@
 
 import NavBar from './components/NavBar/NavBar';
 import ItemListContainer from './Pages/ItemListContainer/ItemListContainer';
-import {BrowserRouter, Routes, Route} from "react-router-dom"
+import { Routes, Route} from 'react-router-dom';
 import ItemDetailContainer from './Pages/ItemDetailContainer/ItemDetailContainer';
 import Cart from './Pages/Cart/Cart';
 import CheckOut from './Pages/CheckOut/CheckOut';
 import Footer from './Pages/Footer/Footer';
-import './App.css'
+import './App.css';
 
 
 function App() {
 
   return (
-    <div className="App">
+    <div className='App'>
       <NavBar />
       <Routes>
         <Route path='/' element={<ItemListContainer/>} />

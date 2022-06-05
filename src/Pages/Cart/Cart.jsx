@@ -2,10 +2,12 @@ import React from 'react';
 import CartItem from '../../components/CartItem/CartItem';
 import { useCardContext } from '../../Context/CardContextProvider';
 import { Link } from 'react-router-dom';
-import './cart.css'
+import './cart.css';
 
-function Cart() {
-    const {cartList, emptyCart, totalPrice} = useCardContext()
+const Cart = () => {
+
+    const {cartList, emptyCart, totalPrice} = useCardContext();
+
     return (
         <div className='cart'>
             {cartList.map((item) =>
@@ -19,7 +21,7 @@ function Cart() {
                         vaciar Carrito
                     </button>
                     <h2 className='totalPrice'>Precio total: ${totalPrice()}</h2>
-                    <Link to="/checkout" className='btnEnd btnEndSell'>
+                    <Link to='/checkout' className='btnEnd btnEndSell'>
                             Finalizar Compra
                     </Link>
                 </div>

@@ -5,16 +5,13 @@ import ItemCount from '../ItemCount/ItemCount';
 import {Link} from "react-router-dom";
 import {useCardContext} from "../../Context/CardContextProvider"
 
-
-
-function ItemDetail({ item }) {
+const ItemDetail = ({ item }) => {
 
     const { addToCart } = useCardContext();
 
     const [condicion, setCondicion] = useState(false);
 
     const extraerValorCarrito = (valorDelCarrito) =>{
-        console.log(item.title)
         let title = item.title;
         addToCart(title, valorDelCarrito, item.price, item.id);
         const productsOfProducts = valorDelCarrito === 1 ? "producto" : "productos";

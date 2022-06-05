@@ -1,10 +1,9 @@
 import React from 'react';
 import { useCardContext } from '../../Context/CardContextProvider';
 
+const CartItem = ({item}) => {
 
-
-function CartItem({item}) {
-    const {deleteById} = useCardContext()
+    const {deleteById} = useCardContext();
 
     return (
         <div className='cartItem'>

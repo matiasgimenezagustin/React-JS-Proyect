@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import "./ItemListContainer.css";
+import './ItemListContainer.css';
 import ItemList from '../../components/ItemList/ItemList';
 import { useParams } from 'react-router-dom';
-import { initializeApp } from "firebase/app";
-import {collection, getDocs, getFirestore, query, where, limit} from "firebase/firestore";
+import { initializeApp } from 'firebase/app';
+import {collection, getDocs, getFirestore, query, where} from 'firebase/firestore';
 import firebaseConfig from '../../services/firebaseConfig';
 import Spinner from '../../components/Spinner/Spinner';
 
@@ -29,10 +29,10 @@ function ItemListContainer({}) {
     
     function getProducts (categoria) {
         const db = getFirestore();
-        const itemCollection = collection(db, "items")
+        const itemCollection = collection(db, 'items')
         const q = categoria && query(
             itemCollection,
-            where("categoria", "==", capitalize(categoria)) 
+            where('categoria', '==', capitalize(categoria)) 
         )
         return getDocs(q || itemCollection)
     }

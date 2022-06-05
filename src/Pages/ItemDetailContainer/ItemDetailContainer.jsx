@@ -1,21 +1,21 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import ItemDetail from '../../components/ItemDetail/ItemDetail';
-import {doc, getDoc, getFirestore} from "firebase/firestore";
-import { initializeApp } from "firebase/app";
+import {doc, getDoc, getFirestore} from 'firebase/firestore';
+import { initializeApp } from 'firebase/app';
 import firebaseConfig from '../../services/firebaseConfig';
 
 
 initializeApp(firebaseConfig);
 
-function ItemDetailContainer(props) {
+const ItemDetailContainer = () => {
 
     const getItem = (id) => {
 
         const db = getFirestore();
-        const itemRef = doc(db, "items" , id);
+        const itemRef = doc(db, 'items' , id);
 
-        return getDoc(itemRef)
+        return getDoc(itemRef);
     }
 
     const {id} = useParams();
@@ -29,9 +29,10 @@ function ItemDetailContainer(props) {
             })
             .catch(err => {
                 console.log(err);
-                alert("Algo ocurrio mal")
+                alert('Algo ocurrio mal');
             })
     }, [id]);
+
     return (
         <div>
             <ItemDetail item={item}/>

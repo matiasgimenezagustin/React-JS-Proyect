@@ -5,35 +5,22 @@ import CardWidget from '../CardWidget/CardWidget';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faAngleDown} from "@fortawesome/free-solid-svg-icons";
 
-
-
-
-const NavBar =  (props) => {
-/*     const btnClicked = ( ) =>{
-        const categoryBtn = document.querySelector(".btnCategory");
-        alert("hola a todos")
-        categoryBtn.innerText = "hola";
-
-    } */
-
-    let buttonValue = "categoria"
+const NavBar = () => {
     return (
         <div className='nav'>
             <h2>
                 React Store
             </h2>
             <ul className='navLinks'>
-                <li><a href="">Home</a></li>
+                <li>
+                    <NavLink to='/'>Home</NavLink>
+                </li>
                 <li><a href="">Contactanos</a></li>
-
-
-                <li className='listItemNav'  /* onClick={btnClicked} */ >
+                <li className='listItemNav' >
                     <button href="" className='btnCategory'>
                         <span>categorias</span>
                         <FontAwesomeIcon icon={faAngleDown} className='arrowNav'/>
                     </button>
-
-
                     <ul className='categoryNesting'>
                         <li>
                             <NavLink  to="/category/cocina">

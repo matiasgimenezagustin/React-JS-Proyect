@@ -1,7 +1,7 @@
 import React from 'react';
 import "./input.css";
 
-function Input({ handleExtraer, id }) {
+const Input = ({ handleExtraer, id }) => {
     return (
         <div>
             <input id={"input-" + id} type="text" />

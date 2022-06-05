@@ -4,9 +4,10 @@ import {faCartShopping} from "@fortawesome/free-solid-svg-icons";
 import {Link} from 'react-router-dom';
 import { useCardContext } from '../../Context/CardContextProvider';
 
-
 const CardWidget = () => {
-    const {totalCount} = useCardContext()
+
+    const {totalCount} = useCardContext();
+
     return (
         <div>
             <Link to="/cart"  className='cartWidgetContainer'>
