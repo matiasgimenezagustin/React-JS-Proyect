@@ -19,7 +19,6 @@ const App = () => {
           <Route path='/item/:id' element={<ItemDetailContainer/>} />
           <Route path='/cart/' element={<Cart/>}/>
           <Route path='/checkout' element={<CheckOut/>}/>
-{/*           <Route path='/contact' element={<Contact/>}/> */}
         </Routes>
       <Footer/>
     </div>

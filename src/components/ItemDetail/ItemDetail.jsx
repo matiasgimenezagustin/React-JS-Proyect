@@ -10,14 +10,19 @@ const ItemDetail = ({ item }) => {
 
     const { addToCart } = useCardContext();
 
-    const [condicion, setCondicion] = useState(false);
+    const [detailLoader, setDetailLoader] = useState(false);
 
     const extraerValorCarrito = (valorDelCarrito) =>{
+
         let title = item.title;
+
         addToCart(title, valorDelCarrito, item.price, item.id);
+        
         const productsOfProducts = valorDelCarrito === 1 ? "producto" : "productos";
+
         const resultAlert = `Agregaste ${valorDelCarrito} ${productsOfProducts} al carrito`;
-        setCondicion (true);
+
+        setDetailLoader (true);
 
         return swal({
             title: "Chill Store dice:",
@@ -27,10 +32,6 @@ const ItemDetail = ({ item }) => {
             timer: 3000
         });
     }
-    useEffect(() => {
-        return () => {
-        }
-    }, [condicion]);
 
     return (
         <div className='itemDetail'>
@@ -47,7 +48,7 @@ const ItemDetail = ({ item }) => {
                     <p className='description'>{item?.descripcion}</p>
                 </div>
                 {
-                condicion === false 
+                detailLoader === false 
                 ? 
                 <ItemCount  initial={1} stock={item?.stock} onAdd={extraerValorCarrito}/>
                 : 

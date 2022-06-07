@@ -1,8 +1,8 @@
 import React from 'react';
-import "./item.css";
-import {Link} from "react-router-dom";
+import './item.css';
+import {Link} from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowRightToBracket} from "@fortawesome/free-solid-svg-icons";
+import { faArrowRightToBracket} from '@fortawesome/free-solid-svg-icons';
 
 const Item = ({ id, title, img, price}) => {
     return (
@@ -10,11 +10,11 @@ const Item = ({ id, title, img, price}) => {
             <h3>
                 {title}
             </h3>
-            <img src={img} />
+            <img src={img} alt='producto de chill store' />
             <h4>Precio: ${price} ARS</h4>
-            <Link className='detailBtn' to={"/item/" + id}>
+            <Link className='detailBtn' to={'/item/' + id}>
                 <h4 className='detailBtnText'>Ver detalle</h4>
-                <FontAwesomeIcon icon={faArrowRightToBracket} className="detailBtnIcon" />
+                <FontAwesomeIcon icon={faArrowRightToBracket} className='detailBtnIcon' />
             </Link>
         </div>
     );

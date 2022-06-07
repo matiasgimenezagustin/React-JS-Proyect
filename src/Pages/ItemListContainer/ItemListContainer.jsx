@@ -15,13 +15,9 @@ function capitalize(str) {
 
 function ItemListContainer({}) {
 
-    const [condicion, setCondicion] = useState(false)
+    const [mainLoad, setMainLoad] = useState(false);
 
-    useEffect(() => {
-    }, [condicion]);
-
-    
-    const [products, setProducts] = useState ([])
+    const [products, setProducts] = useState ([]);
 
     const { categoryId } = useParams();
 
@@ -29,27 +25,27 @@ function ItemListContainer({}) {
     
     function getProducts (categoria) {
         const db = getFirestore();
-        const itemCollection = collection(db, 'items')
+        const itemCollection = collection(db, 'items');
         const q = categoria && query(
             itemCollection,
-            where('categoria', '==', capitalize(categoria)) 
+            where('categoria', '==', capitalize(categoria))
         )
-        return getDocs(q || itemCollection)
+        return getDocs(q || itemCollection);
     }
     
     useEffect (() => {
         getProducts(categoryId)
             .then(snapshot =>{
-                setCondicion(true)
+                setMainLoad(true);
                 setProducts(snapshot.docs.map(doc => {
                     return {...doc.data(), id : doc.id}
                 }))
                 })
-    }, [categoryId])
+    }, [categoryId]);
 
     return (
         <div>
-            {condicion === false ?
+            {mainLoad === false ?
                 <div className='centred'>
                     <Spinner/>
                 </div>

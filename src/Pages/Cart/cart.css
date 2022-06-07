@@ -1,10 +1,20 @@
+.cartTitleItem{
+    background-color: #353a3f;
+    border-radius: 5px;
+}
+.cartTitleItem h2{
+    padding: 5px 20px;
+}
 
 .cartItem{
     background-color: #495057;
-    margin: 20px;
+    margin: 60px;
     color: white;
     border-radius: 5px;
-    padding: 10px;
+    padding: 20px;
+}
+.cartItem h3, .btnDelete{
+    margin-left: 10px;
 }
 .btnEnd{
     color: #fff;

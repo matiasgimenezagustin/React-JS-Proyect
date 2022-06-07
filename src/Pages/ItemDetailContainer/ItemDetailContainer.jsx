@@ -17,7 +17,7 @@ const ItemDetailContainer = () => {
 
         return getDoc(itemRef);
     }
-
+    
     const {id} = useParams();
 
     const [item, setItem] = useState({});
