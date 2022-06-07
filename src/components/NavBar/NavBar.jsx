@@ -7,15 +7,14 @@ import {faAngleDown} from "@fortawesome/free-solid-svg-icons";
 
 const NavBar = () => {
     return (
-        <div className='nav'>
+        <nav className='nav'>
             <h2>
-                React Store
+                Chill Store
             </h2>
             <ul className='navLinks'>
                 <li>
-                    <NavLink to='/'>Home</NavLink>
+                    <NavLink to='/'>Tienda</NavLink>
                 </li>
-                <li><a href="">Contactanos</a></li>
                 <li className='listItemNav' >
                     <button href="" className='btnCategory'>
                         <span>categorias</span>
@@ -46,7 +45,7 @@ const NavBar = () => {
                 </li>
             </ul>
             <CardWidget/>
-        </div>
+        </nav>
     );
 }
 

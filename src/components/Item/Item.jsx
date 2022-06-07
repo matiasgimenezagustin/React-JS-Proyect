@@ -11,7 +11,7 @@ const Item = ({ id, title, img, price}) => {
                 {title}
             </h3>
             <img src={img} />
-            <h4>{price}$</h4>
+            <h4>Precio: ${price} ARS</h4>
             <Link className='detailBtn' to={"/item/" + id}>
                 <h4 className='detailBtnText'>Ver detalle</h4>
                 <FontAwesomeIcon icon={faArrowRightToBracket} className="detailBtnIcon" />

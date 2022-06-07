@@ -56,7 +56,6 @@ const CheckOut = () => {
         setFinalPrice(total);
         const items = cartList.map (e => {return {id: e.id,title: e.item, price: e.price, amount: e.quantity}})
         const data = {day, buyer, items, total}
-        console.log('total' ,data)
         generateOrder(data)
         setLoad(true);
     }

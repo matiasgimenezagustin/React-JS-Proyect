@@ -25,7 +25,9 @@ const Cart = () => {
                             Finalizar Compra
                     </Link>
                 </div>
-                : <h1>Carrito Vacio</h1>}
+                :<div className='emptyCartTitleContainer'>
+                    <h1>Carrito Vacio</h1>
+                </div>}
         </div>
     );
 }

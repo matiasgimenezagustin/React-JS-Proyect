@@ -1,8 +1,11 @@
-
+.title{
+    text-align: center;
+    font-size: 3rem;
+    font-family: 'Anton', sans-serif;
+}
 .listCatalogo{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-
     grid-auto-rows: minmax(100px, auto);
     margin-top: 10vh;
 }
@@ -16,7 +19,6 @@
 
     .listCatalogo{
         grid-template-columns: repeat(1, 1fr);
-
         grid-auto-rows: minmax(100px, auto);
         margin-top: 10vh;
     }

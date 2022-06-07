@@ -4,7 +4,7 @@ import './footer.css';
 const Footer = () => {
     return (
         <footer className='footer'>
-            <h3 className='footerTitle'>React Store</h3>
+            <h3 className='footerTitle'>Chill Store</h3>
         </footer>
     );
 }

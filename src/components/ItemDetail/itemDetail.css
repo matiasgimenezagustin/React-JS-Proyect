@@ -3,12 +3,12 @@
     width: 70%;
     margin: auto;
     margin-top: 50px;
-    padding: 20px;
+    padding: 0px 20px 20px 20px;
     border-radius: 5px;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 4fr;
     grid-template-areas: 
-    "title none"
+    "title title"
     "img descripcion"
     ;
     background-color: #495057;
@@ -16,12 +16,26 @@
     -webkit-box-shadow: 8px 6px 0px 2px rgba(0,0,0,1);
     -moz-box-shadow: 8px 6px 0px 2px rgba(0,0,0,1);
     color: white;
+    font-size: 1.3rem;
 }
 
-.itemDetail img{
-    width: 400px;
+.imgContainer{
+    border-right: #30353b solid 2px;
+    margin-right: 40px;
     grid-area: img;
-    border-radius: 5px;
+}
+.img{
+    border-radius: 10px;
+    width: 400px;
+}
+.description{
+    font-weight: bold;
+    font-size: 1rem;
+}
+.allDescription{
+    background-color: #30353b;
+    border-radius: 10px;
+    padding: 10px;
 }
 
 .itemDetail .detail{
@@ -29,6 +43,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+
 }
 
 .buttonAddCart{
@@ -54,32 +69,71 @@
     background: #fff;
     color: #212529
 }
+.titleDetailContainer{
+    grid-area: title;
+    display: flex;
+    justify-content:baseline;
+    align-items: center;
+    margin-bottom: 0px;
+
+}
 .titleDetail{
-    margin-bottom: 10px;
+    background-color: #30353b;
+    margin-bottom: 0px;
     margin-top: 10px;
     font-size: 2rem;
-    
+    text-align: center;
+    width: 100%;
+    padding: 15px 0px;
+    border-radius: 10px;
+}
+.btnDetailContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    font-size: 1rem;
 }
 @media screen and (max-width: 420px){
+    .img{
+        border-right: none;
+        margin: auto;
+        grid-area: img;
+        width: 230px;
+        border-radius: 5px;
+    }
+    .imgContainer{
+        border: none;
+        margin: 0;
+        display: flex;
+        align-items: center;
+    }
+    .titleDetail{
+        width: 220px;
+    }
     .buttonAddCart{
         width: 12rem;
     }
+    .titleDetailContainer{
+        width: 100%;
+        justify-content: center;
+    }
     .titleDetail{
         text-align: center;
+        width: 220px;
+    }
+    .allDescription{
+        width: 220px;
+        margin: auto;
     }
     .itemDetail{
         grid-template-columns: 1fr;
-        grid-template-rows: 120px 2fr 3fr;
+        grid-template-rows: 120px 1fr 3fr;
         grid-template-areas: 
         "title"
         "img"
         "descripcion"
         ;
-    }
-    .itemDetail img{
-        width: 230px;
-        grid-area: img;
-        border-radius: 5px;
-        margin: auto;
     }
 }

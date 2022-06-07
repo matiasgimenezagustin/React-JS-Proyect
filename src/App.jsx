@@ -9,22 +9,21 @@ import Footer from './Pages/Footer/Footer';
 import './App.css';
 
 
-function App() {
-
+const App = () => {
   return (
     <div className='App'>
       <NavBar />
-      <Routes>
-        <Route path='/' element={<ItemListContainer/>} />
-        <Route path='/category/:categoryId' element={<ItemListContainer/>}/>
-        <Route path='/item/:id' element={<ItemDetailContainer/>} />
-        <Route path='/cart/' element={<Cart/>}/>
-        <Route path='/checkout' element={<CheckOut/>}/>
-      </Routes>
+        <Routes>
+          <Route path='/' element={<ItemListContainer/>} />
+          <Route path='/category/:categoryId' element={<ItemListContainer/>}/>
+          <Route path='/item/:id' element={<ItemDetailContainer/>} />
+          <Route path='/cart/' element={<Cart/>}/>
+          <Route path='/checkout' element={<CheckOut/>}/>
+{/*           <Route path='/contact' element={<Contact/>}/> */}
+        </Routes>
       <Footer/>
     </div>
   );
 }
-
 
 export default App;
